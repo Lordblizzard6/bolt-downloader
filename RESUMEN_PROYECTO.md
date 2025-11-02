@@ -13,7 +13,7 @@ Se ha desarrollado exitosamente una aplicación completamente funcional en .NET 
 ### ✅ FASE 1: Estructura y Ventana Principal
 
 #### Archivos Creados:
-- ✅ `IDM_Clone.csproj` - Proyecto .NET 8 WPF
+- ✅ `Bolt-downloader.csproj` - Proyecto .NET 8 WPF
 - ✅ `App.xaml` / `App.xaml.cs` - Aplicación principal
 - ✅ `MainWindow.xaml` / `MainWindow.xaml.cs` - Ventana principal con UI idéntica a IDM
 
@@ -155,7 +155,7 @@ Se ha desarrollado exitosamente una aplicación completamente funcional en .NET 
 
 ```
 windsurf-project/
-├── 📄 IDM_Clone.csproj          # Proyecto .NET 8
+├── 📄 Bolt-downloader.csproj    # Proyecto .NET 8
 ├── 📄 App.xaml                  # Aplicación WPF
 ├── 📄 App.xaml.cs               # Código aplicación
 ├── 📄 MainWindow.xaml           # Ventana principal UI

@@ -123,7 +123,7 @@ BoltDownloader/
 │   └── Styles.xaml              # Estilos visuales
 ├── App.xaml                     # Aplicación principal
 ├── MainWindow.xaml              # Ventana principal
-└── IDM_Clone.csproj             # Archivo de proyecto
+└── Bolt-downloader.csproj       # Archivo de proyecto
 ```
 
 ## 🛠️ Requisitos del Sistema
