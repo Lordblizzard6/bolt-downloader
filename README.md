@@ -342,7 +342,7 @@ Notas:
 
 ## ⚠️ Disclaimer
 
-Esta aplicación es un clon educativo de IDM. No está afiliada ni respaldada por Tonec Inc. (creadores de Internet Download Manager). Úsela bajo su propia responsabilidad.
+Úsela bajo su propia responsabilidad.
 
 ## 👨‍💻 Desarrollado con
 
@@ -368,7 +368,7 @@ Sigue estos pasos para instalar y probar la extensión del navegador que envía 
 2) Empaquetar o usar la carpeta descomprimida
 
 - Opción A: Usar carpeta descomprimida
-  - Ruta: `Extensions/Chrome/`
+  - Ruta: `Extensions/Chrome/` (La Extension ahora esta disponible para descarga por separado en Releases)
   - Úsala con "Load unpacked" (ver más abajo).
 - Opción B: Generar ZIP/CRX (Windows)
   - Desde la raíz del proyecto:
@@ -383,14 +383,14 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 - Abre `chrome://extensions/`.
 - Activa "Developer mode" (Modo desarrollador).
 - Elige una de estas opciones:
-  - "Load unpacked" y selecciona la carpeta `Extensions/Chrome/`.
+  - "Load unpacked" y selecciona la carpeta `Extensions/Chrome/`. (La Extension ahora esta disponible para descarga por separado en Releases)
   - "Pack extension" para empaquetar; o instala el `.crx` generado si tu navegador lo permite.
 
 4) Instalar en Microsoft Edge
 
 - Abre `edge://extensions/`.
 - Activa "Modo de desarrollador".
-- "Cargar descomprimida" y selecciona `Extensions/Chrome/`.
+- "Cargar descomprimida" y selecciona `Extensions/Chrome/`. (La Extension ahora esta disponible para descarga por separado en Releases)
 
 5) Probar el flujo end‑to‑end
 
@@ -418,15 +418,15 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
   - Ejecuta el script con `-NoCrx` para quedarte solo con el ZIP.
   - Usa "Pack extension" en `chrome://extensions/`.
 
-8) Actualizar la extensión durante el desarrollo
+8) Actualizar la extensión
 
-- Cambia archivos en `Extensions/Chrome/` y pulsa "Reload" en `chrome://extensions/`.
+- Cambia archivos en `Extensions/Chrome/` y pulsa "Reload" en `chrome://extensions/`. (La Extension ahora esta disponible para descarga por separado en Releases)
 - Si empaquetas, vuelve a ejecutar `build.ps1` para generar nuevos artefactos.
 
 9) Idiomas (i18n)
 
 - La extensión soporta en/es/de/fr a través de `_locales/` y selecciona el idioma según el navegador.
-- Para cambiar textos, edita `Extensions/Chrome/_locales/<lang>/messages.json`.
+- Para cambiar textos, edita `Extensions/Chrome/_locales/<lang>/messages.json`. 
 
 ----
 
@@ -459,5 +459,3 @@ Set-ExecutionPolicy Bypass -Scope Process -Force
 ## Notas de Seguridad
 
 - El servidor escucha sólo en loopback y expone CORS abierto. Se recomienda mantener el binario en entornos confiables. Opcional: filtrar por `Origin` conocido o token local si se extiende el API.
-
-**¡Disfruta de tus descargas más rápidas con Bolt Downloader!** 🚀
