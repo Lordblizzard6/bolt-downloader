@@ -1,0 +1,66 @@
+# Build outputs
+/bin/
+/obj/
+**/bin/
+**/obj/
+**/out/
+/publish/
+**/publish/
+
+# Visual Studio & tooling
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*_wpftmp.csproj
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# VS Code (evitar config local de cada dev)
+.vscode/
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs y temporales
+*.log
+*.tmp
+~$*
+
+# SO
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Archivos binarios/artefactos que no deben versionarse
+*.exe
+*.dll
+*.pdb
+*.iso
+*.msi
+*.7z
+*.zip
+*.rar
+
+# Extensión Chrome (artefactos empaquetados)
+Extensions/Chrome/*.crx
+Extensions/Chrome/*.pem
+Extensions/Chrome/*.zip
+Extensions/Chrome/*.rar
+Extensions/*.crx
+Extensions/*.pem
+Extensions/*.zip
+Extensions/*.rar
+
+# Publicaciones locales
+*.Publish.xml
+
+# Otros
+*.coverage
+*.coveragexml
+TestResult*/
+TestResults/

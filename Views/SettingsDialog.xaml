@@ -1,0 +1,229 @@
+<Window x:Class="BoltDownloader.Views.SettingsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{DynamicResource Title_Settings}"
+        Height="500" Width="680"
+        WindowStartupLocation="CenterOwner"
+        Background="{DynamicResource SurfaceColor}">
+    
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- TabControl para organizar opciones -->
+        <TabControl Grid.Row="0">
+            <!-- Pestaña Conexión -->
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="{DynamicResource Tab_Connection}"/>
+                </TabItem.Header>
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="10">
+                        <GroupBox Header="{DynamicResource Group_DownloadSettings}" Padding="10" Margin="0,0,0,10">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                    <TextBlock Text="{DynamicResource Label_MaxSegments}" Width="220" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtMaxSegments" Width="80" Height="25"/>
+                                    <TextBlock Text="{DynamicResource Hint_SegmentsRange}" Margin="10,0,0,0" VerticalAlignment="Center" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                    <TextBlock Text="{DynamicResource Label_MaxConcurrent}" Width="220" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtMaxConcurrent" Width="80" Height="25"/>
+                                    <TextBlock Text="{DynamicResource Hint_ConcurrentRange}" Margin="10,0,0,0" VerticalAlignment="Center" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{DynamicResource Label_TimeoutSeconds}" Width="220" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtTimeout" Width="80" Height="25"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="{DynamicResource Group_Proxy}" Padding="10">
+                            <StackPanel>
+                                <CheckBox x:Name="chkUseProxy" Content="{DynamicResource Label_UseProxy}"
+                                          Margin="0,0,0,10" Checked="chkUseProxy_CheckedChanged" 
+                                          Unchecked="chkUseProxy_CheckedChanged"/>
+
+                                <StackPanel x:Name="panelProxy" IsEnabled="False">
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                        <TextBlock Text="{DynamicResource Label_ProxyServer}" Width="120" VerticalAlignment="Center"/>
+                                        <TextBox x:Name="txtProxyAddress" Width="200" Height="25" Margin="0,0,10,0"/>
+                                        <TextBlock Text="{DynamicResource Label_ProxyPort}" Width="50" VerticalAlignment="Center"/>
+                                        <TextBox x:Name="txtProxyPort" Width="80" Height="25"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                        <TextBlock Text="{DynamicResource Label_ProxyUser}" Width="120" VerticalAlignment="Center"/>
+                                        <TextBox x:Name="txtProxyUsername" Width="200" Height="25"/>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{DynamicResource Label_ProxyPassword}" Width="120" VerticalAlignment="Center"/>
+                                        <PasswordBox x:Name="txtProxyPassword" Width="200" Height="25"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <!-- Pestaña Carpetas -->
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="{DynamicResource Tab_Folders}"/>
+                </TabItem.Header>
+                <StackPanel Margin="10">
+                    <GroupBox Header="{DynamicResource Group_DownloadLocations}" Padding="10">
+                        <StackPanel>
+                            <TextBlock Text="{DynamicResource Label_DefaultFolder}" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <Grid Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="txtDefaultPath" Height="25" Grid.Column="0" IsReadOnly="True"/>
+                                <Button Grid.Column="1" Content="{DynamicResource Button_Browse}" Width="110"
+                                        Margin="5,0,0,0" Click="BrowseDefaultPath_Click"/>
+                            </Grid>
+
+                            <TextBlock Text="{DynamicResource Label_TempFolder}" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="txtTempPath" Height="25" Grid.Column="0" IsReadOnly="True"/>
+                                <Button Grid.Column="1" Content="{DynamicResource Button_Browse}" Width="110"
+                                        Margin="5,0,0,0" Click="BrowseTempPath_Click"/>
+                            </Grid>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Pestaña Navegador -->
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="{DynamicResource Tab_Browser}"/>
+                </TabItem.Header>
+                <StackPanel Margin="10">
+                    <GroupBox Header="{DynamicResource Group_BrowserIntegration}" Padding="10">
+                        <StackPanel>
+                            <CheckBox x:Name="chkMonitorClipboard"
+                                      Content="{DynamicResource Label_MonitorClipboard}"
+                                      Margin="0,0,0,15"/>
+
+                            <TextBlock Text="{DynamicResource Label_UserAgent}" FontWeight="Bold" Margin="0,0,0,5"/>
+                            <TextBox x:Name="txtUserAgent" Height="60" 
+                                     TextWrapping="Wrap" 
+                                     AcceptsReturn="True"
+                                     VerticalScrollBarVisibility="Auto"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Pestaña Avanzado -->
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock Text="{DynamicResource Tab_Advanced}"/>
+                </TabItem.Header>
+                <StackPanel Margin="10">
+                    <GroupBox Header="{DynamicResource Group_AdvancedSettings}" Padding="10">
+                        <StackPanel>
+                            <GroupBox Header="{DynamicResource Group_Language}" Padding="10" Margin="0,0,0,15">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{DynamicResource Label_LanguageUI}" Width="220" VerticalAlignment="Center"/>
+                                    <ComboBox x:Name="cmbLanguage" Width="200" Height="25" SelectionChanged="cmbLanguage_SelectionChanged">
+                                        <ComboBoxItem Content="{DynamicResource Lang_Es}" Tag="es"/>
+                                        <ComboBoxItem Content="{DynamicResource Lang_En}" Tag="en"/>
+                                        <ComboBoxItem Content="{DynamicResource Lang_De}" Tag="de"/>
+                                        <ComboBoxItem Content="{DynamicResource Lang_Fr}" Tag="fr"/>
+                                    </ComboBox>
+                                </StackPanel>
+                            </GroupBox>
+
+                            <GroupBox Header="{DynamicResource Settings_Appearance}" Padding="10" Margin="0,0,0,15">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{DynamicResource Settings_Appearance_Theme}" Width="220" VerticalAlignment="Center"/>
+                                    <ComboBox x:Name="cmbTheme" Width="200" Height="25" SelectionChanged="cmbTheme_SelectionChanged">
+                                        <ComboBoxItem Content="{DynamicResource Theme_Light}" Tag="light"/>
+                                        <ComboBoxItem Content="{DynamicResource Theme_Dark}" Tag="dark"/>
+                                    </ComboBox>
+                                </StackPanel>
+                            </GroupBox>
+
+                            <!-- Bandeja y comportamiento -->
+                            <GroupBox Header="Bandeja y comportamiento" Padding="10" Margin="0,0,0,15">
+                                <StackPanel>
+                                    <CheckBox x:Name="chkCloseToTray" Content="Cerrar con X minimiza a bandeja (Close to tray)" Margin="0,0,0,8"/>
+                                    <CheckBox x:Name="chkTrayBalloon" Content="Mostrar aviso al minimizar (una vez por sesión)"/>
+                                </StackPanel>
+                            </GroupBox>
+
+                            <!-- Nombres de archivo -->
+                            <GroupBox Header="Nombres de archivo" Padding="10" Margin="0,0,0,15">
+                                <StackPanel>
+                                    <CheckBox x:Name="chkSlugifyFileNames" Content="Normalizar nombres (slugify) para compatibilidad de archivos"/>
+                                </StackPanel>
+                            </GroupBox>
+
+                            <!-- Tipos de archivos a capturar -->
+                            <GroupBox Header="Tipos de archivos a capturar (separados por coma)" Padding="10" Margin="0,0,0,15">
+                                <StackPanel>
+                                    <TextBlock Text="Ejemplo: .zip, .rar, .7z, .pdf, .exe" Margin="0,0,0,6" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                                    <TextBox x:Name="txtFileTypes" Height="70" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+                                </StackPanel>
+                            </GroupBox>
+
+                            <!-- yt-dlp settings -->
+                            <GroupBox Header="Resolución con yt-dlp" Padding="10" Margin="0,0,0,15">
+                                <StackPanel>
+                                    <CheckBox x:Name="chkYtDlpEnabled" Content="Habilitar resolver con yt-dlp" Margin="0,0,0,10"/>
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                        <CheckBox x:Name="chkYtDlpAskFormat" Content="Preguntar formato al capturar"/>
+                                        <CheckBox x:Name="chkYtDlpAudioOnly" Content="Audio solamente" Margin="20,0,0,0"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                        <TextBlock Text="Selector de formato (-f):" Width="220" VerticalAlignment="Center"/>
+                                        <TextBox x:Name="txtYtDlpFormatSelector" Width="300"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                                        <CheckBox x:Name="chkYtDlpSubtitles" Content="Descargar subtítulos"/>
+                                        <TextBlock Text="Idiomas (coma):" Margin="20,0,6,0" VerticalAlignment="Center"/>
+                                        <TextBox x:Name="txtYtDlpSubtitleLangs" Width="160"/>
+                                    </StackPanel>
+                                    <CheckBox x:Name="chkYtDlpMetadata" Content="Guardar metadata (si aplica)"/>
+                                </StackPanel>
+                            </GroupBox>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                                <TextBlock Text="{DynamicResource Label_MaxRetries}" Width="220" VerticalAlignment="Center"/>
+                                <TextBox x:Name="txtMaxRetries" Width="80" Height="25"/>
+                            </StackPanel>
+
+                            <Button Content="{DynamicResource Button_ResetDefaults}"
+                                    Width="220" 
+                                    HorizontalAlignment="Left"
+                                    Click="ResetDefaults_Click"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <!-- Botones -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" 
+                    HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="{DynamicResource Button_OK}" Width="110" Height="30" 
+                    Margin="0,0,10,0" Click="Ok_Click" IsDefault="True"/>
+            <Button Content="{DynamicResource Button_Cancel}" Width="110" Height="30" 
+                    Click="Cancel_Click" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = tab
+
+tab_width = 4
+
+[*.sh]
+end_of_line = lf
+indent_style = tab
+indent_size = tab
+
+[*.ps1]
+end_of_line = crlf
+indent_style = tab
+indent_size = tab
+
+[*.cs]
+indent_style = tab
+indent_size = tab
+
+[*.xaml]
+indent_style = tab
+indent_size = tab
+
+[*.json]
+indent_style = tab
+indent_size = tab
+
+[*.js]
+indent_style = tab
+indent_size = tab
+
+[*.md]
+indent_style = tab
+indent_size = tab

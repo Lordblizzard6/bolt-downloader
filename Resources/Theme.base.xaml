@@ -1,0 +1,26 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- Base palette keys used by templates. Theme.light.xaml / Theme.dark.xaml override these. -->
+  <SolidColorBrush x:Key="PrimaryColor" Color="#0078D7"/>
+  <SolidColorBrush x:Key="SecondaryColor" Color="#005A9E"/>
+
+  <SolidColorBrush x:Key="BackgroundColor" Color="#F5F7FA"/>
+  <SolidColorBrush x:Key="SurfaceColor" Color="#FFFFFF"/>
+  <SolidColorBrush x:Key="SurfaceAltColor" Color="#F3F6F9"/>
+  <SolidColorBrush x:Key="BorderColor" Color="#D0D7DE"/>
+  <SolidColorBrush x:Key="HoverColor" Color="#E7F2FF"/>
+
+  <SolidColorBrush x:Key="TextPrimaryBrush" Color="#1A1A1A"/>
+  <SolidColorBrush x:Key="TextSecondaryBrush" Color="#5A5A5A"/>
+
+  <!-- Menu brushes -->
+  <SolidColorBrush x:Key="MenuBackgroundBrush" Color="#FFFFFF"/>
+  <SolidColorBrush x:Key="MenuBorderBrush" Color="#D0D7DE"/>
+  <SolidColorBrush x:Key="MenuItemHoverBrush" Color="#E7F2FF"/>
+  <SolidColorBrush x:Key="MenuItemForegroundBrush" Color="#1A1A1A"/>
+  <SolidColorBrush x:Key="MenuItemDisabledForegroundBrush" Color="#9AA0A6"/>
+
+  <!-- Selection brushes used across controls (DataGrid, etc.) -->
+  <SolidColorBrush x:Key="SelectedBackgroundBrush" Color="#DDEEFF"/>
+  <SolidColorBrush x:Key="SelectedForegroundBrush" Color="#1A1A1A"/>
+</ResourceDictionary>

@@ -1,0 +1,78 @@
+<Window x:Class="BoltDownloader.Views.DownloadProgressDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Descarga en progreso" Height="420" Width="640"
+        WindowStartupLocation="CenterOwner" 
+        Background="{DynamicResource SurfaceColor}"
+        Foreground="{DynamicResource TextPrimaryBrush}">
+    <DockPanel>
+        <Grid DockPanel.Dock="Top" Margin="12">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock x:Name="txtFileName" FontWeight="Bold" FontSize="14"/>
+            <ProgressBar x:Name="pbOverall" Grid.Row="1" Height="20" Minimum="0" Maximum="100" Margin="0,8,0,0"/>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,6,0,0">
+                <TextBlock Text="Velocidad: " FontWeight="Bold"/>
+                <TextBlock x:Name="txtSpeed" Margin="4,0,12,0"/>
+                <TextBlock Text="Estimado: " FontWeight="Bold"/>
+                <TextBlock x:Name="txtEta" Margin="4,0,12,0"/>
+                <TextBlock Text="Descargado: " FontWeight="Bold"/>
+                <TextBlock x:Name="txtProgress"/>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Right">
+                <Button x:Name="btnPauseResume" Content="⏸ Pausar" Width="110" Height="28" Click="PauseResume_Click" Margin="0,0,8,0"/>
+                <Button x:Name="btnCancel" Content="Cancelar" Width="100" Height="28" Click="Cancel_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <TabControl Margin="12">
+            <TabItem Header="Conexiones">
+                <DataGrid x:Name="dgSegments" AutoGenerateColumns="False" CanUserAddRows="False"
+                          HeadersVisibility="Column" GridLinesVisibility="All" RowHeight="28"
+                          Background="{DynamicResource SurfaceColor}"
+                          AlternatingRowBackground="{DynamicResource SurfaceAltColor}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="#" Binding="{Binding SegmentIndex}" Width="50"/>
+                        <DataGridTextColumn Header="Rango" Width="200" Binding="{Binding RangeText}"/>
+                        <DataGridTextColumn Header="Descargado" Width="150" Binding="{Binding DownloadedText}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </TabItem>
+            <TabItem Header="Límite de velocidad" Foreground="{DynamicResource TextPrimaryBrush}">
+                <StackPanel Margin="10">
+                <GroupBox Header="Global" Margin="0,0,0,10" Foreground="{DynamicResource TextPrimaryBrush}">
+                    <StackPanel Margin="10,6,10,6">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                                <TextBlock Text="Límite global:" Width="120" VerticalAlignment="Center" Foreground="{DynamicResource TextPrimaryBrush}"/>
+                                <TextBox x:Name="txtSpeedLimit" Width="120" Height="25" Foreground="{DynamicResource TextSecondaryBrush}"/>
+                                <ComboBox x:Name="cmbSpeedUnit" Width="80" Height="25" Margin="8,0,0,0" Foreground="{DynamicResource TextSecondaryBrush}">
+                                    <ComboBoxItem Content="KB/s" IsSelected="True"/>
+                                    <ComboBoxItem Content="MB/s"/>
+                                </ComboBox>
+                                <Button Content="Aplicar" Width="90" Height="25" Margin="10,0,0,0" Click="ApplySpeedLimit_Click"/>
+                            </StackPanel>
+                            <TextBlock Text="Este límite se aplica a todas las descargas activas." Foreground="Gray" FontSize="11"/>
+                        </StackPanel>
+                    </GroupBox>
+
+                    <GroupBox Header="Por descarga">
+                        <StackPanel Margin="10,6,10,6">
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                                <TextBlock Text="Límite de esta descarga:" Width="160" VerticalAlignment="Center"/>
+                                <TextBox x:Name="txtPerSpeedLimit" Width="120" Height="25"/>
+                                <TextBlock Text="KB/s" Margin="8,0,0,0" VerticalAlignment="Center"/>
+                                <Button Content="Aplicar" Width="90" Height="25" Margin="10,0,0,0" Click="ApplyPerSpeedLimit_Click"/>
+                            </StackPanel>
+                            <TextBlock x:Name="txtEffectiveInfo" Text="" Foreground="Gray" FontSize="11"/>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

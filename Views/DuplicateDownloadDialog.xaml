@@ -1,0 +1,37 @@
+<Window x:Class="BoltDownloader.Views.DuplicateDownloadDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Archivo duplicado" Height="260" Width="520" WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize" Background="{DynamicResource SurfaceColor}"
+        Foreground="{DynamicResource TextPrimaryBrush}">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock Text="El archivo ya existe en la carpeta de destino." FontWeight="Bold"/>
+            <TextBlock x:Name="txtInfo" Text="Seleccione una opción:" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="0,0,0,10">
+            <RadioButton x:Name="rbRename" Content="Renombrar archivo" IsChecked="True" Checked="Option_Checked"/>
+            <StackPanel Orientation="Horizontal" Margin="25,6,0,10">
+                <TextBlock Text="Nuevo nombre:" VerticalAlignment="Center" Width="100"/>
+                <TextBox x:Name="txtNewName" Width="320" Height="25"/>
+            </StackPanel>
+
+            <RadioButton x:Name="rbSkip" Content="No descargar" Checked="Option_Checked"/>
+
+            <RadioButton x:Name="rbUpdate" Content="Actualizar enlace de descarga del archivo existente" Checked="Option_Checked"/>
+            <TextBlock x:Name="txtUpdateHint" Text="Se actualizará el enlace del elemento ya existente en la lista." FontSize="11" Foreground="Gray" Margin="25,5,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Continuar" Width="100" Height="30" Margin="0,0,10,0" Click="Ok_Click" IsDefault="True"/>
+            <Button Content="Cancelar" Width="100" Height="30" Click="Cancel_Click" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

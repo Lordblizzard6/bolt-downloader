@@ -1,0 +1,21 @@
+{
+	"extName": { "message": "Bolt Downloader Helfer" },
+	"extDescription": { "message": "Erkennt Videos/Dateien auf der Seite und sendet sie über localhost an Bolt Downloader." },
+	"actionTitle": { "message": "Bolt Downloader" },
+	"ctxDownloadLink": { "message": "Mit Bolt herunterladen" },
+	"ctxDownloadSelection": { "message": "Ausgewählte URL mit Bolt herunterladen" },
+	"notifTitle": { "message": "Bolt Downloader" },
+	"notifAddedOne": { "message": "1 Element hinzugefügt" },
+	"notifAddedMany": { "message": "$1 Element(e) hinzugefügt", "placeholders": {"1": {"content": "$1"}} },
+	"popupTitle": { "message": "Erkannte Medien" },
+	"popupNote": { "message": "Klicken Sie auf ein Element, um es an Bolt zu senden" },
+	"emptyList": { "message": "Auf dieser Seite wurden keine Medien erkannt." },
+	"mediaFallback": { "message": "Medium" },
+	"toastAdded": { "message": "An Bolt gesendet" },
+	"toastFailed": { "message": "Senden fehlgeschlagen. Läuft Bolt?" },
+	"btnClear": { "message": "Links löschen" },
+	"btnClearTitle": { "message": "Erkannte Einträge löschen" },
+	"toastCleared": { "message": "Liste gelöscht" },
+	"qualityHls": { "message": "HLS: $1", "placeholders": {"1": {"content": "$1"}} },
+	"qualityDash": { "message": "DASH: $1", "placeholders": {"1": {"content": "$1"}} }
+}

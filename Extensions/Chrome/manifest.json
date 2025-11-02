@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "default_locale": "en",
+  "name": "__MSG_extName__",
+  "version": "0.1.1",
+  "icons": {
+    "16": "silk2_32_mm0.png",
+    "32": "silk2_32_mm0.png",
+    "48": "silk2_48_mm0-01.png",
+    "128": "silk2_128_mm0.png"
+  },
+  "description": "__MSG_extDescription__",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "downloads",
+    "scripting",
+    "contextMenus",
+    "webRequest",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1:17890/*",
+    "http://localhost:17890/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "__MSG_actionTitle__",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "silk2_32_mm0.png",
+      "32": "silk2_32_mm0.png",
+      "48": "silk2_48_mm0-01.png",
+      "128": "silk2_128_mm0.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

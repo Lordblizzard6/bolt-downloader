@@ -1,0 +1,21 @@
+{
+	"extName": { "message": "Assistant Bolt Downloader" },
+	"extDescription": { "message": "Détecte des vidéos/fichiers sur la page et les envoie à Bolt Downloader via localhost." },
+	"actionTitle": { "message": "Bolt Downloader" },
+	"ctxDownloadLink": { "message": "Télécharger avec Bolt" },
+	"ctxDownloadSelection": { "message": "Télécharger l’URL sélectionnée avec Bolt" },
+	"notifTitle": { "message": "Bolt Downloader" },
+	"notifAddedOne": { "message": "1 élément ajouté" },
+	"notifAddedMany": { "message": "$1 élément(s) ajouté(s)", "placeholders": {"1": {"content": "$1"}} },
+	"popupTitle": { "message": "Médias détectés" },
+	"popupNote": { "message": "Cliquez sur un élément pour l'envoyer à Bolt" },
+	"emptyList": { "message": "Aucun média détecté sur cette page." },
+	"mediaFallback": { "message": "Média" },
+	"toastAdded": { "message": "Ajouté à Bolt" },
+	"toastFailed": { "message": "Échec de l'envoi. Bolt est-il en cours d'exécution ?" },
+	"btnClear": { "message": "Supprimer les liens" },
+	"btnClearTitle": { "message": "Supprimer les éléments détectés" },
+	"toastCleared": { "message": "Liste effacée" },
+	"qualityHls": { "message": "HLS : $1", "placeholders": {"1": {"content": "$1"}} },
+	"qualityDash": { "message": "DASH : $1", "placeholders": {"1": {"content": "$1"}} }
+}

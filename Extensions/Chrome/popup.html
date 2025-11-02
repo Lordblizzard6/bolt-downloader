@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bolt Downloader</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 10px; width: 360px; background:#fafafa; }
+    h1 { font-size: 16px; margin: 0 0 8px; }
+    .toolbar { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+    .btn { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border:1px solid #ddd; background:#fff; color:#333; border-radius:6px; cursor:pointer; font-size:12px; }
+    .btn:hover { background:#f7f7f7; }
+    .list { max-height: 320px; overflow: auto; border: 1px solid #ddd; background: #fff; border-radius: 6px; }
+    .item { display: grid; grid-template-columns: 1fr; gap: 6px; padding: 8px; border-bottom: 1px solid #eee; cursor: pointer; }
+    .item:hover { background: #f2f7ff; }
+    .item:last-child { border-bottom: 0; }
+    .url { font-size: 11px; color: #555; word-break: break-all; }
+    .title { font-size: 13px; font-weight: 600; }
+    .meta-row { font-size: 11px; color:#1976D2; font-weight:600; padding-left: 12px; }
+    .muted { color:#777; font-size:12px; }
+    #toast { margin: 6px 0 8px; padding: 6px 8px; border-radius: 4px; display: none; }
+    #toast.success { background: #E7F6EC; color: #1E7E34; border: 1px solid #C3E6CB; }
+    #toast.error { background: #FDECEA; color: #B02A37; border: 1px solid #F5C2C7; }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <h1 id="title"></h1>
+    <button id="btnClear" class="btn" title="Clear">
+      <span>🗑</span>
+      <span id="btnClearText"></span>
+    </button>
+  </div>
+  <div id="toast" class="muted"></div>
+  <div id="note" class="muted"></div>
+  <div id="container" class="list"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

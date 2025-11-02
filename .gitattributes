@@ -1,0 +1,35 @@
+* text=auto
+
+# Fuerza LF para scripts de shell
+*.sh text eol=lf
+*.bash text eol=lf
+
+# Windows CRLF para scripts por lotes y PowerShell
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Archivos binarios
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.rar binary
+*.7z binary
+*.crx binary
+*.dll binary
+*.exe binary
+*.pdb binary
+
+# Tratar XAML y CS como texto normal (resuelve eol por sistema)
+*.xaml text
+*.cs text
+*.csproj text
+*.sln text
+*.json text
+*.js text
+*.ts text
+*.css text
+*.md text

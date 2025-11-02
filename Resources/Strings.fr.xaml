@@ -1,0 +1,239 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- App title -->
+  <sys:String x:Key="App_Title" xmlns:sys="clr-namespace:System;assembly=mscorlib">Bolt Downloader</sys:String>
+  <sys:String x:Key="MainMenu_Root" xmlns:sys="clr-namespace:System;assembly=mscorlib">☰ Menu</sys:String>
+  <!-- Download Completed Dialog -->
+  <sys:String x:Key="CompletedDialog_Title" xmlns:sys="clr-namespace:System;assembly=mscorlib">Téléchargement terminé</sys:String>
+  <sys:String x:Key="CompletedDialog_Message" xmlns:sys="clr-namespace:System;assembly=mscorlib">Le téléchargement s'est terminé avec succès.</sys:String>
+  <sys:String x:Key="CompletedDialog_File" xmlns:sys="clr-namespace:System;assembly=mscorlib">Fichier :</sys:String>
+  <sys:String x:Key="CompletedDialog_Size" xmlns:sys="clr-namespace:System;assembly=mscorlib">Taille :</sys:String>
+  <sys:String x:Key="CompletedDialog_Location" xmlns:sys="clr-namespace:System;assembly=mscorlib">Emplacement :</sys:String>
+  <sys:String x:Key="CompletedDialog_OpenFile" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ouvrir le fichier</sys:String>
+  <sys:String x:Key="CompletedDialog_OpenFolder" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ouvrir le dossier</sys:String>
+  <sys:String x:Key="CompletedDialog_Close" xmlns:sys="clr-namespace:System;assembly=mscorlib">Fermer</sys:String>
+
+  <!-- Menu principal -->
+  <sys:String x:Key="MainMenu_File" xmlns:sys="clr-namespace:System;assembly=mscorlib">Fichier</sys:String>
+  <sys:String x:Key="MainMenu_File_NewDownload" xmlns:sys="clr-namespace:System;assembly=mscorlib">Nouveau téléchargement</sys:String>
+  <sys:String x:Key="MainMenu_File_AddBatch" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ajouter des téléchargements par lot</sys:String>
+  <sys:String x:Key="MainMenu_File_Import" xmlns:sys="clr-namespace:System;assembly=mscorlib">Importer des téléchargements</sys:String>
+  <sys:String x:Key="MainMenu_File_Export" xmlns:sys="clr-namespace:System;assembly=mscorlib">Exporter des téléchargements</sys:String>
+  <sys:String x:Key="MainMenu_File_Exit" xmlns:sys="clr-namespace:System;assembly=mscorlib">Quitter</sys:String>
+
+  <sys:String x:Key="MainMenu_Downloads" xmlns:sys="clr-namespace:System;assembly=mscorlib">Téléchargements</sys:String>
+  <sys:String x:Key="MainMenu_Downloads_Start" xmlns:sys="clr-namespace:System;assembly=mscorlib">Démarrer</sys:String>
+  <sys:String x:Key="MainMenu_Downloads_Pause" xmlns:sys="clr-namespace:System;assembly=mscorlib">Pause</sys:String>
+  <sys:String x:Key="MainMenu_Downloads_Resume" xmlns:sys="clr-namespace:System;assembly=mscorlib">Reprendre</sys:String>
+  <sys:String x:Key="MainMenu_Downloads_Cancel" xmlns:sys="clr-namespace:System;assembly=mscorlib">Annuler</sys:String>
+  <sys:String x:Key="MainMenu_Downloads_PauseAll" xmlns:sys="clr-namespace:System;assembly=mscorlib">Tout mettre en pause</sys:String>
+  <sys:String x:Key="MainMenu_Downloads_ResumeAll" xmlns:sys="clr-namespace:System;assembly=mscorlib">Tout reprendre</sys:String>
+  <sys:String x:Key="MainMenu_Downloads_CancelAll" xmlns:sys="clr-namespace:System;assembly=mscorlib">Tout annuler</sys:String>
+  <sys:String x:Key="MainMenu_Downloads_DeleteFromList" xmlns:sys="clr-namespace:System;assembly=mscorlib">Supprimer de la liste</sys:String>
+  <sys:String x:Key="MainMenu_Downloads_DeleteCompleted" xmlns:sys="clr-namespace:System;assembly=mscorlib">Supprimer les terminés</sys:String>
+
+  <sys:String x:Key="MainMenu_Scheduler" xmlns:sys="clr-namespace:System;assembly=mscorlib">Planificateur</sys:String>
+  <sys:String x:Key="MainMenu_Scheduler_Add" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ajouter une tâche planifiée</sys:String>
+  <sys:String x:Key="MainMenu_Scheduler_View" xmlns:sys="clr-namespace:System;assembly=mscorlib">Afficher les planifications</sys:String>
+
+  <sys:String x:Key="MainMenu_Options" xmlns:sys="clr-namespace:System;assembly=mscorlib">Options</sys:String>
+  <sys:String x:Key="MainMenu_Options_Settings" xmlns:sys="clr-namespace:System;assembly=mscorlib">Paramètres</sys:String>
+  <sys:String x:Key="MainMenu_Options_SpeedLimit" xmlns:sys="clr-namespace:System;assembly=mscorlib">Limite de vitesse</sys:String>
+
+  <sys:String x:Key="MainMenu_Help" xmlns:sys="clr-namespace:System;assembly=mscorlib">Aide</sys:String>
+  <sys:String x:Key="MainMenu_Help_About" xmlns:sys="clr-namespace:System;assembly=mscorlib">À propos</sys:String>
+
+  <!-- Barre d'outils -->
+  <sys:String x:Key="Toolbar_Add_Tooltip" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ajouter un téléchargement</sys:String>
+  <sys:String x:Key="Toolbar_Add_Text" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ajouter</sys:String>
+  <sys:String x:Key="Toolbar_Pause_Tooltip" xmlns:sys="clr-namespace:System;assembly=mscorlib">Mettre le téléchargement en pause</sys:String>
+  <sys:String x:Key="Toolbar_Pause_Text" xmlns:sys="clr-namespace:System;assembly=mscorlib">Pause</sys:String>
+  <sys:String x:Key="Toolbar_Resume_Tooltip" xmlns:sys="clr-namespace:System;assembly=mscorlib">Reprendre le téléchargement</sys:String>
+  <sys:String x:Key="Toolbar_Resume_Text" xmlns:sys="clr-namespace:System;assembly=mscorlib">Reprendre</sys:String>
+  <sys:String x:Key="Toolbar_Delete_Tooltip" xmlns:sys="clr-namespace:System;assembly=mscorlib">Supprimer le téléchargement</sys:String>
+  <sys:String x:Key="Toolbar_Delete_Text" xmlns:sys="clr-namespace:System;assembly=mscorlib">Supprimer</sys:String>
+  <sys:String x:Key="Toolbar_Settings_Tooltip" xmlns:sys="clr-namespace:System;assembly=mscorlib">Paramètres</sys:String>
+  <sys:String x:Key="Toolbar_Settings_Text" xmlns:sys="clr-namespace:System;assembly=mscorlib">Options</sys:String>
+
+  <!-- Menu contextuel -->
+  <sys:String x:Key="Context_OpenFile" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ouvrir le fichier</sys:String>
+  <sys:String x:Key="Context_OpenFolder" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ouvrir le dossier</sys:String>
+  <sys:String x:Key="Context_Start" xmlns:sys="clr-namespace:System;assembly=mscorlib">Démarrer</sys:String>
+  <sys:String x:Key="Context_Pause" xmlns:sys="clr-namespace:System;assembly=mscorlib">Pause</sys:String>
+  <sys:String x:Key="Context_Resume" xmlns:sys="clr-namespace:System;assembly=mscorlib">Reprendre</sys:String>
+  <sys:String x:Key="Context_Cancel" xmlns:sys="clr-namespace:System;assembly=mscorlib">Annuler</sys:String>
+  <sys:String x:Key="Context_Delete" xmlns:sys="clr-namespace:System;assembly=mscorlib">Supprimer de la liste</sys:String>
+  <sys:String x:Key="Context_CopyUrl" xmlns:sys="clr-namespace:System;assembly=mscorlib">Copier l’URL</sys:String>
+  <sys:String x:Key="Context_CopyFileName" xmlns:sys="clr-namespace:System;assembly=mscorlib">Copier le nom du fichier</sys:String>
+  <sys:String x:Key="Context_CopyFullPath" xmlns:sys="clr-namespace:System;assembly=mscorlib">Copier le chemin complet</sys:String>
+  <sys:String x:Key="Context_OpenReferrer" xmlns:sys="clr-namespace:System;assembly=mscorlib">Ouvrir le référent</sys:String>
+  <sys:String x:Key="Context_MoveToCategory" xmlns:sys="clr-namespace:System;assembly=mscorlib">Déplacer vers la catégorie</sys:String>
+  <sys:String x:Key="Context_Properties" xmlns:sys="clr-namespace:System;assembly=mscorlib">Propriétés</sys:String>
+
+  <!-- Colonnes -->
+  <sys:String x:Key="Column_Name" xmlns:sys="clr-namespace:System;assembly=mscorlib">Nom</sys:String>
+  <sys:String x:Key="Column_Size" xmlns:sys="clr-namespace:System;assembly=mscorlib">Taille</sys:String>
+  <sys:String x:Key="Column_Status" xmlns:sys="clr-namespace:System;assembly=mscorlib">Statut</sys:String>
+  <sys:String x:Key="Column_Speed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Vitesse</sys:String>
+  <sys:String x:Key="Column_Progress" xmlns:sys="clr-namespace:System;assembly=mscorlib">Progression</sys:String>
+  <sys:String x:Key="Column_TimeRemaining" xmlns:sys="clr-namespace:System;assembly=mscorlib">Temps restant</sys:String>
+
+  <!-- Statut -->
+  <sys:String x:Key="Status_Ready" xmlns:sys="clr-namespace:System;assembly=mscorlib">Prêt</sys:String>
+  <sys:String x:Key="Status_Paused" xmlns:sys="clr-namespace:System;assembly=mscorlib">En pause</sys:String>
+  <sys:String x:Key="Status_Downloading" xmlns:sys="clr-namespace:System;assembly=mscorlib">Téléchargement...</sys:String>
+  <sys:String x:Key="Status_ActiveDownloads_One" xmlns:sys="clr-namespace:System;assembly=mscorlib">1 téléchargement actif</sys:String>
+  <sys:String x:Key="Status_ActiveDownloads_Many" xmlns:sys="clr-namespace:System;assembly=mscorlib">{0} téléchargements actifs</sys:String>
+
+  <!-- Titres communs de dialogue -->
+  <sys:String x:Key="Title_Info" xmlns:sys="clr-namespace:System;assembly=mscorlib">Information</sys:String>
+  <sys:String x:Key="Title_Warning" xmlns:sys="clr-namespace:System;assembly=mscorlib">Avertissement</sys:String>
+  <sys:String x:Key="Title_Error" xmlns:sys="clr-namespace:System;assembly=mscorlib">Erreur</sys:String>
+  <sys:String x:Key="Title_Validation" xmlns:sys="clr-namespace:System;assembly=mscorlib">Validation</sys:String>
+  <sys:String x:Key="Title_Confirm" xmlns:sys="clr-namespace:System;assembly=mscorlib">Confirmer</sys:String>
+  <sys:String x:Key="Title_ConfirmDelete" xmlns:sys="clr-namespace:System;assembly=mscorlib">Confirmer la suppression</sys:String>
+  <sys:String x:Key="Title_ConfirmCancel" xmlns:sys="clr-namespace:System;assembly=mscorlib">Confirmer l'annulation</sys:String>
+  <sys:String x:Key="Title_Import" xmlns:sys="clr-namespace:System;assembly=mscorlib">Importer</sys:String>
+  <sys:String x:Key="Title_Export" xmlns:sys="clr-namespace:System;assembly=mscorlib">Exporter</sys:String>
+  <sys:String x:Key="Title_Clipboard" xmlns:sys="clr-namespace:System;assembly=mscorlib">Presse-papiers</sys:String>
+  <sys:String x:Key="Title_DownloadError" xmlns:sys="clr-namespace:System;assembly=mscorlib">Erreur de téléchargement</sys:String>
+  <sys:String x:Key="Title_UrlDetected" xmlns:sys="clr-namespace:System;assembly=mscorlib">URL détectée</sys:String>
+  <sys:String x:Key="Title_About" xmlns:sys="clr-namespace:System;assembly=mscorlib">À propos</sys:String>
+  <sys:String x:Key="Title_AppError" xmlns:sys="clr-namespace:System;assembly=mscorlib">Erreur de l'application</sys:String>
+  <sys:String x:Key="Title_Success" xmlns:sys="clr-namespace:System;assembly=mscorlib">Succès</sys:String>
+  <sys:String x:Key="Title_Properties" xmlns:sys="clr-namespace:System;assembly=mscorlib">Propriétés</sys:String>
+
+  <!-- Messages communs -->
+  <sys:String x:Key="Error_AddDownloadFailed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Impossible d'ajouter le téléchargement :
+{0}</sys:String>
+  <sys:String x:Key="Confirm_CancelDownload" xmlns:sys="clr-namespace:System;assembly=mscorlib">Voulez-vous vraiment annuler le téléchargement '{0}' ?</sys:String>
+  <sys:String x:Key="Confirm_DeleteFromListWithFiles" xmlns:sys="clr-namespace:System;assembly=mscorlib">Voulez-vous supprimer '{0}' de la liste ?
+
+Voulez-vous également supprimer les fichiers téléchargés ?</sys:String>
+  <sys:String x:Key="Confirm_DeleteCompletedCount" xmlns:sys="clr-namespace:System;assembly=mscorlib">Voulez-vous supprimer {0} téléchargements terminés de la liste ?</sys:String>
+  <sys:String x:Key="Info_NoCompletedDownloads" xmlns:sys="clr-namespace:System;assembly=mscorlib">Aucun téléchargement terminé à supprimer.</sys:String>
+  <sys:String x:Key="Info_ImportedCount" xmlns:sys="clr-namespace:System;assembly=mscorlib">{0} téléchargements importés.</sys:String>
+  <sys:String x:Key="Error_ImportFailed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Échec de l'importation : {0}</sys:String>
+  <sys:String x:Key="Info_ExportCompleted" xmlns:sys="clr-namespace:System;assembly=mscorlib">Exportation terminée.</sys:String>
+  <sys:String x:Key="Error_ExportFailed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Échec de l'exportation : {0}</sys:String>
+  <sys:String x:Key="About_Text" xmlns:sys="clr-namespace:System;assembly=mscorlib">Bolt Downloader v1.0
+
+.NET 8 + WPF
+Gestionnaire de téléchargements multi‑thread avec segmentation (style IDM)
+
+© 2025 - Application open-source</sys:String>
+  <sys:String x:Key="Info_FileNotFound" xmlns:sys="clr-namespace:System;assembly=mscorlib">Le fichier n'existe pas.</sys:String>
+  <sys:String x:Key="Error_OpenFileFailed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Impossible d'ouvrir le fichier : {0}</sys:String>
+  <sys:String x:Key="Info_FolderNotFound" xmlns:sys="clr-namespace:System;assembly=mscorlib">Le dossier n'existe pas.</sys:String>
+  <sys:String x:Key="Error_OpenFolderFailed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Impossible d'ouvrir le dossier : {0}</sys:String>
+  <sys:String x:Key="Confirm_CancelAll" xmlns:sys="clr-namespace:System;assembly=mscorlib">Annuler tous les téléchargements ?</sys:String>
+  <sys:String x:Key="Error_DownloadFailedWithName" xmlns:sys="clr-namespace:System;assembly=mscorlib">Erreur lors du téléchargement de '{0}' :
+{1}</sys:String>
+  <sys:String x:Key="Confirm_DetectedUrlPrompt" xmlns:sys="clr-namespace:System;assembly=mscorlib">Une URL a été détectée dans le presse‑papiers :
+{0}
+
+Voulez-vous la télécharger ?</sys:String>
+  <sys:String x:Key="Info_OperationCancelled" xmlns:sys="clr-namespace:System;assembly=mscorlib">Opération annulée. Le téléchargement n'a pas été ajouté.</sys:String>
+  <sys:String x:Key="Error_StartUpdatedFailed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Impossible de démarrer le téléchargement mis à jour : {0}</sys:String>
+  <sys:String x:Key="Error_StartFailed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Impossible de démarrer le téléchargement : {0}</sys:String>
+  <sys:String x:Key="Duplicate_ErrorResolveAndRename" xmlns:sys="clr-namespace:System;assembly=mscorlib">Erreur lors du traitement du doublon : {0}
+Tentative de renommage automatique.</sys:String>
+
+  <!-- AddDownloadDialog validations -->
+  <sys:String x:Key="Validation_EnterValidUrl" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez saisir une URL valide.</sys:String>
+  <sys:String x:Key="Validation_InvalidUrl" xmlns:sys="clr-namespace:System;assembly=mscorlib">L'URL saisie n'est pas valide.</sys:String>
+  <sys:String x:Key="Validation_EnterFileName" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez saisir un nom de fichier.</sys:String>
+  <sys:String x:Key="Validation_SelectFolder" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez sélectionner un dossier de destination.</sys:String>
+  <sys:String x:Key="Info_ClipboardEmpty" xmlns:sys="clr-namespace:System;assembly=mscorlib">Le presse‑papiers ne contient pas de texte.</sys:String>
+  <sys:String x:Key="Validation_EnterValidName" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez saisir un nom valide.</sys:String>
+
+  <!-- Erreurs globales de l'appli -->
+  <sys:String x:Key="App_DispatcherUnhandled" xmlns:sys="clr-namespace:System;assembly=mscorlib">Une erreur inattendue s'est produite :
+{0}</sys:String>
+  <sys:String x:Key="App_Unhandled" xmlns:sys="clr-namespace:System;assembly=mscorlib">Erreur non gérée :
+{0}</sys:String>
+  <sys:String x:Key="App_UnobservedTask" xmlns:sys="clr-namespace:System;assembly=mscorlib">Erreur de tâche :
+{0}</sys:String>
+
+  <!-- DownloadCompletedDialog -->
+  <sys:String x:Key="Info_FileNotOnDisk" xmlns:sys="clr-namespace:System;assembly=mscorlib">Le fichier n'existe pas sur le disque.</sys:String>
+  <sys:String x:Key="Info_DestinationFolderMissing" xmlns:sys="clr-namespace:System;assembly=mscorlib">Le dossier de destination n'existe pas.</sys:String>
+
+  <!-- SchedulerDialog -->
+  <sys:String x:Key="Validation_Schedule_EnterName" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez saisir un nom de tâche.</sys:String>
+  <sys:String x:Key="Validation_Schedule_SelectType" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez sélectionner un type de tâche.</sys:String>
+  <sys:String x:Key="Validation_Schedule_SelectDate" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez sélectionner une date.</sys:String>
+  <sys:String x:Key="Validation_Schedule_EnterValidTime" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez saisir une heure valide (HH:mm).</sys:String>
+  <sys:String x:Key="Validation_Schedule_SelectAction" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez sélectionner une action.</sys:String>
+  <sys:String x:Key="Info_Schedule_Created" xmlns:sys="clr-namespace:System;assembly=mscorlib">Tâche planifiée créée avec succès.</sys:String>
+  <sys:String x:Key="Confirm_Schedule_Delete" xmlns:sys="clr-namespace:System;assembly=mscorlib">Voulez-vous vraiment supprimer la tâche '{0}' ?</sys:String>
+
+  <!-- DownloadProgressDialog -->
+  <sys:String x:Key="Validation_EnterValidValue" xmlns:sys="clr-namespace:System;assembly=mscorlib">Saisissez une valeur valide.</sys:String>
+  <sys:String x:Key="Validation_EnterValidKbps" xmlns:sys="clr-namespace:System;assembly=mscorlib">Saisissez une valeur valide (KB/s).</sys:String>
+
+  <!-- SpeedLimitDialog -->
+  <sys:String x:Key="Validation_EnterValidSpeed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Veuillez saisir une vitesse valide.</sys:String>
+
+  <!-- BatchDownloadDialog -->
+  <sys:String x:Key="Validation_NoValidUrls" xmlns:sys="clr-namespace:System;assembly=mscorlib">Aucune URL valide trouvée.</sys:String>
+
+  <!-- Paramètres (UI localisée) -->
+  <sys:String x:Key="Title_Settings" xmlns:sys="clr-namespace:System;assembly=mscorlib">Paramètres</sys:String>
+  <sys:String x:Key="Tab_Connection" xmlns:sys="clr-namespace:System;assembly=mscorlib">Connexion</sys:String>
+  <sys:String x:Key="Group_DownloadSettings" xmlns:sys="clr-namespace:System;assembly=mscorlib">Paramètres de téléchargement</sys:String>
+  <sys:String x:Key="Label_MaxSegments" xmlns:sys="clr-namespace:System;assembly=mscorlib">Nombre de segments :</sys:String>
+  <sys:String x:Key="Hint_SegmentsRange" xmlns:sys="clr-namespace:System;assembly=mscorlib">(1-16)</sys:String>
+  <sys:String x:Key="Label_MaxConcurrent" xmlns:sys="clr-namespace:System;assembly=mscorlib">Téléchargements simultanés :</sys:String>
+  <sys:String x:Key="Hint_ConcurrentRange" xmlns:sys="clr-namespace:System;assembly=mscorlib">(1-10)</sys:String>
+  <sys:String x:Key="Label_TimeoutSeconds" xmlns:sys="clr-namespace:System;assembly=mscorlib">Délai d’expiration (secondes) :</sys:String>
+  <sys:String x:Key="Group_Proxy" xmlns:sys="clr-namespace:System;assembly=mscorlib">Proxy</sys:String>
+  <sys:String x:Key="Label_UseProxy" xmlns:sys="clr-namespace:System;assembly=mscorlib">Utiliser un serveur proxy</sys:String>
+  <sys:String x:Key="Label_ProxyServer" xmlns:sys="clr-namespace:System;assembly=mscorlib">Serveur :</sys:String>
+  <sys:String x:Key="Label_ProxyPort" xmlns:sys="clr-namespace:System;assembly=mscorlib">Port :</sys:String>
+  <sys:String x:Key="Label_ProxyUser" xmlns:sys="clr-namespace:System;assembly=mscorlib">Utilisateur :</sys:String>
+  <sys:String x:Key="Label_ProxyPassword" xmlns:sys="clr-namespace:System;assembly=mscorlib">Mot de passe :</sys:String>
+  <sys:String x:Key="Tab_Folders" xmlns:sys="clr-namespace:System;assembly=mscorlib">Dossiers</sys:String>
+  <sys:String x:Key="Group_DownloadLocations" xmlns:sys="clr-namespace:System;assembly=mscorlib">Emplacements de téléchargement</sys:String>
+  <sys:String x:Key="Label_DefaultFolder" xmlns:sys="clr-namespace:System;assembly=mscorlib">Dossier par défaut :</sys:String>
+  <sys:String x:Key="Button_Browse" xmlns:sys="clr-namespace:System;assembly=mscorlib">Parcourir…</sys:String>
+  <sys:String x:Key="Label_TempFolder" xmlns:sys="clr-namespace:System;assembly=mscorlib">Dossier temporaire :</sys:String>
+  <sys:String x:Key="Tab_Browser" xmlns:sys="clr-namespace:System;assembly=mscorlib">Navigateur</sys:String>
+  <sys:String x:Key="Group_BrowserIntegration" xmlns:sys="clr-namespace:System;assembly=mscorlib">Intégration du navigateur</sys:String>
+  <sys:String x:Key="Label_MonitorClipboard" xmlns:sys="clr-namespace:System;assembly=mscorlib">Surveiller le presse‑papiers pour les URLs</sys:String>
+  <sys:String x:Key="Label_UserAgent" xmlns:sys="clr-namespace:System;assembly=mscorlib">User‑Agent :</sys:String>
+  <sys:String x:Key="Tab_Advanced" xmlns:sys="clr-namespace:System;assembly=mscorlib">Avancé</sys:String>
+  <sys:String x:Key="Group_AdvancedSettings" xmlns:sys="clr-namespace:System;assembly=mscorlib">Paramètres avancés</sys:String>
+  <sys:String x:Key="Group_Language" xmlns:sys="clr-namespace:System;assembly=mscorlib">Langue</sys:String>
+  <sys:String x:Key="Label_LanguageUI" xmlns:sys="clr-namespace:System;assembly=mscorlib">Langue de l’interface :</sys:String>
+  <sys:String x:Key="Label_MaxRetries" xmlns:sys="clr-namespace:System;assembly=mscorlib">Nombre maximal de tentatives :</sys:String>
+  <sys:String x:Key="Button_ResetDefaults" xmlns:sys="clr-namespace:System;assembly=mscorlib">Réinitialiser par défaut</sys:String>
+  <sys:String x:Key="Button_OK" xmlns:sys="clr-namespace:System;assembly=mscorlib">OK</sys:String>
+  <sys:String x:Key="Button_Cancel" xmlns:sys="clr-namespace:System;assembly=mscorlib">Annuler</sys:String>
+
+  <!-- Apparence/Thème -->
+  <sys:String x:Key="Settings_Appearance" xmlns:sys="clr-namespace:System;assembly=mscorlib">Apparence</sys:String>
+  <sys:String x:Key="Settings_Appearance_Theme" xmlns:sys="clr-namespace:System;assembly=mscorlib">Thème de l’application :</sys:String>
+  <sys:String x:Key="Theme_Light" xmlns:sys="clr-namespace:System;assembly=mscorlib">Clair</sys:String>
+  <sys:String x:Key="Theme_Dark" xmlns:sys="clr-namespace:System;assembly=mscorlib">Sombre</sys:String>
+
+  <!-- Noms de langues -->
+  <sys:String x:Key="Lang_Es" xmlns:sys="clr-namespace:System;assembly=mscorlib">Español</sys:String>
+  <sys:String x:Key="Lang_En" xmlns:sys="clr-namespace:System;assembly=mscorlib">English</sys:String>
+  <sys:String x:Key="Lang_De" xmlns:sys="clr-namespace:System;assembly=mscorlib">Deutsch</sys:String>
+  <sys:String x:Key="Lang_Fr" xmlns:sys="clr-namespace:System;assembly=mscorlib">Français</sys:String>
+
+  <!-- Catégories -->
+  <sys:String x:Key="Category_All" xmlns:sys="clr-namespace:System;assembly=mscorlib">Tous</sys:String>
+  <sys:String x:Key="Category_Others" xmlns:sys="clr-namespace:System;assembly=mscorlib">Autres</sys:String>
+  <sys:String x:Key="Category_Compressed" xmlns:sys="clr-namespace:System;assembly=mscorlib">Archives</sys:String>
+  <sys:String x:Key="Category_Documents" xmlns:sys="clr-namespace:System;assembly=mscorlib">Documents</sys:String>
+  <sys:String x:Key="Category_Images" xmlns:sys="clr-namespace:System;assembly=mscorlib">Images</sys:String>
+  <sys:String x:Key="Category_Music" xmlns:sys="clr-namespace:System;assembly=mscorlib">Musique</sys:String>
+  <sys:String x:Key="Category_Programs" xmlns:sys="clr-namespace:System;assembly=mscorlib">Programmes</sys:String>
+  <sys:String x:Key="Category_Videos" xmlns:sys="clr-namespace:System;assembly=mscorlib">Vidéos</sys:String>
+
+  <!-- Boîtes de dialogue de dossiers -->
+  <sys:String x:Key="Settings_BrowseDefaultFolder" xmlns:sys="clr-namespace:System;assembly=mscorlib">Sélectionnez le dossier de téléchargement par défaut</sys:String>
+  <sys:String x:Key="Settings_BrowseTempFolder" xmlns:sys="clr-namespace:System;assembly=mscorlib">Sélectionnez le dossier temporaire</sys:String>
+</ResourceDictionary>
